@@ -2,194 +2,106 @@
 
 # MDB React 5
 
-### React 17 & Bootstrap 5 & Material Design 2.0 UI KIT
+Responsive React Timelines built with Bootstrap 5. Horizontal and vertical timeline examples, interactive timeline, double-sided timeline & more. Easy to customize.
 
-**[>> Get Started in 4 steps](https://mdbootstrap.com/docs/b5/react/getting-started/installation/)**
+Check out [React Timeline Documentation](https://mdbootstrap.com/docs/react/extended/timeline) for detailed instructions & even more examples.
 
-**[>> MDBReact 5 Demo](https://mdbootstrap.com/docs/b5/react#demo)**
+## Basic example
+![Basic example](https://user-images.githubusercontent.com/108793661/186896362-31b22fba-2f50-41f5-a5ca-ae1ce0f9f448.png)
+```js
+import React from "react";
+import { MDBContainer } from "mdb-react-ui-kit";
 
-<a href="https://npmcharts.com/compare/mdb-react-ui-kit?minimal=true"> <img src="https://img.shields.io/npm/dw/mdb-react-ui-kit" alt="Downloads"></a>
-<a href="https://github.com/mdbootstrap/mdb-react-ui-kit/License.pdf"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
-<a href="https://twitter.com/intent/tweet/?text=Thanks+@mdbootstrap+for+creating+amazing+and+free+Material+Design+for+Bootstrap+4+UI+KIT%20https://mdbootstrap.com/docs/jquery/&hashtags=javascript,code,webdesign,bootstrap"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Let%20us%20know%20you%20were%20here%21&"></a>
-<a href="https://www.youtube.com/watch?v=c9B4TPnak1A&t=6s"><img alt="YouTube Video Views" src="https://img.shields.io/youtube/views/c9B4TPnak1A?label=Bootstrap%205%20Tutorial%20Views&style=social"></a>
+export default function App() {
+  return (
+    <MDBContainer className="py-5">
+      <ul className="timeline">
+        <li className="timeline-item mb-5">
+          <h5 className="fw-bold">Our company starts its operations</h5>
+          <p className="text-muted mb-2 fw-bold">11 March 2020</p>
+          <p className="text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+            necessitatibus adipisci, ad alias, voluptate pariatur officia
+            repellendus repellat inventore fugit perferendis totam dolor
+            voluptas et corrupti distinctio maxime corporis optio?
+          </p>
+        </li>
+        <li className="timeline-item mb-5">
+          <h5 className="fw-bold">First customer</h5>
+          <p className="text-muted mb-2 fw-bold">19 March 2020</p>
+          <p className="text-muted">
+            Quisque ornare dui nibh, sagittis egestas nisi luctus nec. Sed
+            aliquet laoreet sapien, eget pulvinar lectus maximus vel. Phasellus
+            suscipit porta mattis.
+          </p>
+        </li>
+        <li className="timeline-item mb-5">
+          <h5 className="fw-bold">Our team exceeds 10 people</h5>
+          <p className="text-muted mb-2 fw-bold">24 June 2020</p>
+          <p className="text-muted">
+            Orci varius natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Nulla ullamcorper arcu lacus, maximus
+            facilisis erat pellentesque nec. Duis et dui maximus dui aliquam
+            convallis. Quisque consectetur purus erat, et ullamcorper sapien
+            tincidunt vitae.
+          </p>
+        </li>
+        <li className="timeline-item mb-5">
+          <h5 className="fw-bold">Earned the first million $!</h5>
+          <p className="text-muted mb-2 fw-bold">15 October 2020</p>
+          <p className="text-muted">
+            Nulla ac tellus convallis, pulvinar nulla ac, fermentum diam. Sed et
+            urna sit amet massa dapibus tristique non finibus ligula. Nam
+            pharetra libero nibh, id feugiat tortor rhoncus vitae. Ut suscipit
+            vulputate mattis.
+          </p>
+        </li>
+      </ul>
+    </MDBContainer>
+  );
+}
+```
+```css
+.timeline {
+  border-left: 1px solid hsl(0, 0%, 90%);
+  position: relative;
+  list-style: none;
+}
 
----
+.timeline .timeline-item {
+  position: relative;
+}
 
-<table>
-  <tbody>
-    <tr>
-      <td>
-          <a href="https://mdbootstrap.com/docs/b5/react/" alt="Bootstrap 5" rel="dofollow">
-          		<img src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/content/en/_mdb5/standard/about/assets/mdb5-about.jpg">
-          </a>
-      </td>
-      <td>
-        <ul>
-        <li><b>500+ material UI components</b></li>
-         <li>Super simple, 1 minute installation</li>
-         <li>Detailed docs & multiple practical examples</li>
-         <li>React 17</li>
-         <li>Huge and active community</li>
-         <li><b>MIT license - free for personal & commercial use</b></li>
-        </ul>
-      </td>
-    </tr>
-   </tbody>
-</table>
+.timeline .timeline-item:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
 
-Trusted by <b>2 000 000+</b> developers & designers. Used by companies like
+.timeline .timeline-item:after {
+  background-color: hsl(0, 0%, 90%);
+  left: -38px;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  content: "";
+}
+```
 
-<table>
-  <tbody>
-    <tr>
-      <td><img src="https://mdbootstrap.com/img/logo/brands/nike.png" style="width: 10px;"></td>
-      <td><img src="https://mdbootstrap.com/img/logo/brands/amazon.png" style="width: 10px;"></td>
-      <td><img src="https://mdbootstrap.com/img/logo/brands/sony.png" style="width: 10px;"></td>
-      <td><img src="https://mdbootstrap.com/img/logo/brands/samsung.png"  style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/airbus.png" style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/yahoo.png"  style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/deloitte.png" style="height: 40px"></div>
-      <td><img src="https://mdbootstrap.com/img/logo/brands/ge.png" style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/kpmg.png" style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/unity.png" style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/ikea.png" style="max-height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/aegon.png" style="height: 40px">
-    </tr>
-   </tbody>
-</table>
+## How to use?
 
----
+1. Download MDB 5 - FREE REACT UI KIT
 
-###### Tutorial for the latest Bootstrap v.5 Alpha. In this video we'll learn about the changes implemented into v.5.
+2. Choose your favourite customized component and click on the image
 
-**[>> Click here for a written tutorial](https://mdbootstrap.com/docs/b5/react/getting-started/quick-start/)**
+3. Copy & paste the code into your MDB project
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-          		<img src="https://mdbootstrap.com/wp-content/uploads/2020/12/learnmore-1.png">
-          </a>
-      </td>
-      <td>
-          <a href="https://mdbootstrap.com/docs/b5/react/bootstrap-5-tutorial/#section-beginner" alt="Bootstrap 5" rel="dofollow">
-          		<img src="https://mdbootstrap.com/wp-content/uploads/2020/12/cover-bootstrap-5-1.png">
-          </a>
-      </td>
-    </tr>
-     <tr>
-        <td align="center">
-          <p align="center"><b>Start to Code</b></p>
-          <a href="https://mdbootstrap.com/docs/b5/react/bootstrap-5-tutorial/#section-beginner" alt="Bootstrap 5" rel="dofollow">
-          		<img src="https://mdbootstrap.com/wp-content/uploads/2020/12/Screenshot_26.png">
-          </a>
-         </td>
-        <td align="center">
-          <p align="center"><b>Learn Bootstrap 5 | Crash Course for Beginners in 1.5H</b></p>
-          <a href="https://mdbootstrap.com/docs/b5/react/bootstrap-5-tutorial/#section-beginner" alt="Bootstrap 5" rel="dofollow">
-          		<img src="https://mdbootstrap.com/wp-content/uploads/2020/12/Screenshot_26.png">
-          </a>
-         </td>
-      </tr>
-   </tbody>
-</table>
+[▶️ Subscribe to YouTube channel for web development tutorials & resources](https://www.youtube.com/MDBootstrap?sub_confirmation=1)
 
----
 
-# Demo
+## More examples (click on the image to see a live demo)
+### Events timeline with icons:
+[![React Timeline #1](https://user-images.githubusercontent.com/108793661/186896680-61fe5a0a-63f2-4113-a99d-b612f3232c0f.png)](https://mdbootstrap.com/docs/react/extended/timeline#section-events-timeline-with-icons)
 
-#### Simplicity and ease of use are key features of MDBReact 5 UI Kit. You need only one minute to install and run it.
-
-### Buttons
-
-<p>Use MDB custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
-
-<a href="https://mdbootstrap.com/docs/b5/react/components/buttons/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-buttons.gif">
-  </p>
-</a>
-
-<a href="https://mdbootstrap.com/docs/b5/react/components/buttons/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-social-buttons.png">
-  </p>
-</a>
-
-<a href="https://mdbootstrap.com/docs/b5/react/components/buttons/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-buttons2.png">
-  </p>
-</a>
-
-<a href="https://mdbootstrap.com/docs/b5/react/components/buttons/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-buttons-outline.gif">
-  </p>
-</a>
-
-### Spinners
-
-<p>Indicate the loading state of a component or page with MDB spinners, built entirely with HTML, CSS, and no JavaScript.</p>
-
-<a href="https://mdbootstrap.com/docs/b5/react/components/spinners/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-loader.gif">
-  </p>
-</a>
-
-<a href="https://mdbootstrap.com/docs/b5/react/components/spinners/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-color-spinners.gif">
-  </p>
-</a>
-
-### Cards
-
-<p>A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.</p>
-
-<a href="https://mdbootstrap.com/docs/b5/react/components/cards/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-cards.png">
-  </p>
-</a>
-
-### Footer
-
-<p>A footer is an additional navigation component. It can hold links, buttons, company info, copyrights, forms, and many other elements.</p>
-
-<a href="https://mdbootstrap.com/docs/b5/react/navigation/footer/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-footer.png">
-  </p>
-</a>
-
-### Hover
-
-<p>MDB hover effect appears when the user positions the computer cursor over an element without activating it. Hover effects make a website more interactive.</p>
-
-<a href="https://mdbootstrap.com/docs/b5/react/content-styles/hover-effects/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-hover.gif">
-  </p>
-</a>
-
-<a href="https://mdbootstrap.com/docs/b5/react/content-styles/hover-effects/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-hover2.png">
-  </p>
-</a>
-
-### Notes
-
-<p>Notes are small components very helpful in inserting an additional piece of information.</p>
-
-<a href="https://mdbootstrap.com/docs/b5/react/content-styles/typography/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-alerts.png">
-  </p>
-</a>
-
-</table>
-
-and more.
+### Double-sided timeline:
+[![React Timeline #2](https://user-images.githubusercontent.com/108793661/186899284-f278b8f5-a50d-4347-92a2-04c078ae67d9.png)](https://mdbootstrap.com/docs/react/extended/timeline#section-double-sided)
